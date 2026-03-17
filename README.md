@@ -14,7 +14,7 @@ profile = {
     "role":         "Cybersecurity Student → U.S. Army Cyber Officer (17A) 🪖",
     "location":     "USA 🇺🇸",
     "focus":        ["Blue Team Ops", "Threat Detection", "Security Automation"],
-    "clearance":    "Eligible",
+    "clearance":    "Active",
     "status":       "Commissioning soon. Building until then.",
 }
 ```
