@@ -12,7 +12,7 @@
 profile = {
     "name":         "Elijah Beese",
     "role":         "Cybersecurity Student → U.S. Army Cyber Officer (17A) 🪖",
-    "location":     "Texas, USA 🇺🇸",
+    "location":     "USA 🇺🇸",
     "focus":        ["Blue Team Ops", "Threat Detection", "Security Automation"],
     "clearance":    "Eligible",
     "status":       "Commissioning soon. Building until then.",
