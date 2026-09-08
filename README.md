@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00FF41&background=000000&center=true&vCenter=true&width=700&lines=Elijah+Beese;National+Guard+Cyber+Warfare+Officer+(17A);Cybersecurity+%2B+Computer+Engineering;Building+tools+that+fight+back.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=00FF41&background=000000&center=true&vCenter=true&width=700&lines=Elijah+Beese;National+Guard+Cyber+Warfare+Officer+(17A);Cybersecurity+Engineer+%40+Textron+Systems;Building+my+own+AI+on+hardware+I+set+up+myself.)](https://git.io/typing-svg)
 
 ---
 
@@ -7,17 +7,17 @@
 ```python
 profile = {
     "name":         "Elijah Beese",
-    "role":         "National Guard Cyber Warfare Officer (17A)",
-    "civilian":     "Cybersecurity Engineer | AI x Security Builder",
-    "location":     "Tampa, FL",
+    "role":         "Cyber Warfare Officer (17A), Vermont Army National Guard",
+    "civilian":     "Cybersecurity Engineer @ Textron Systems | AI x Security Builder",
+    "location":     "Baltimore, MD",
     "education":    {
         "BS":       "Cybersecurity, University of Tampa (NSA CAE-CD)",
         "MS":       "Computer Engineering, Florida International University (in progress)",
     },
-    "focus":        ["Blue Team Ops", "Threat Detection", "Security Automation",
-                     "AI x Security", "ICS / Critical Infra"],
-    "clearance":    "Active",
-    "status":       "Drilling. Building. Learning in public.",
+    "focus":        ["Blue Team Ops", "AI x Security", "Homelab Infrastructure",
+                     "Applied ML", "Network Defense"],
+    "clearance":    "Active TS/SCI",
+    "status":       "Drilling. Building. Fine-tuning my own AI on hardware I set up myself.",
 }
 ```
 
@@ -25,7 +25,7 @@ profile = {
 
 ## Currently Building
 
-> **[homelab](https://github.com/elijahbeese/homelab)** — Enterprise-grade security lab built from commodity hardware. **Proxmox VE 9** hypervisor running OPNsense, Kali, and Splunk on a Dell OptiPlex; an HP ProLiant DL360 in Iowa carrying Wazuh on the heavy-lift side; a Raspberry Pi 5 doing Pi-hole + Zeek at the perimeter. Tailscale stitches it all together over apartment NAT — no port forwarding, outbound-only. Splunk is currently indexing 40k+ events shipped from Kali via Universal Forwarder. **Next up:** Wazuh stand-up on the ProLiant, then a full Active Directory lab (Server 2022 DC + Win10/11 victims) for Kerberoasting, Pass-the-Hash, and DCSync detection scenarios.
+> **[D.A.V.E.](https://github.com/elijahbeese)** -- a self-hosted, LoRA fine-tuned AI assistant running on hardware I set up myself. Llama 3.1 8B served through **Ollama**, retrained nightly on real conversations through a full pipeline (distill -> judge -> train -> eval -> promote only if it actually scores better, never auto-promoted blind). Persistent memory is split between structured facts and embedded conversation history, so it genuinely remembers past exchanges instead of starting cold every session. Reachable over a web GUI and a polled email bridge, with proactive daily check-ins. Storage backend is a **Dell PowerVault NX3200** running **TrueNAS SCALE**, RAIDZ1 across 4 drives, ZFS end to end. Currently extending it with computer vision -- a PoE door camera and a pan-tilt window camera feeding into the same Pi -- so it can actually see what's happening, not just answer what it's asked.
 
 ---
 
@@ -33,11 +33,12 @@ profile = {
 
 | Repo | What It Does | Stack |
 |------|--------------|-------|
-| **[homelab](https://github.com/elijahbeese/homelab)** | Multi-site security lab — attack VMs, SIEM, network monitoring, IDS, and overlay networking spanning FL and IA | `Proxmox` · `OPNsense` · `Splunk` · `Wazuh` · `Zeek` · `Tailscale` |
-| **[sitrep](https://github.com/elijahbeese/sitrep)** | AI job intel platform — 9-source parallel discovery, AI scoring, recruiter recon, outreach, gap & interview prep | `Python` · `Flask` · `OpenAI` · `Hunter.io` · `Railway` |
+| **[D.A.V.E.](https://github.com/elijahbeese)** | Self-hosted, LoRA fine-tuned AI assistant with a nightly automated retraining pipeline, persistent memory, email + web access, and an in-progress computer vision extension | `Python` · `Llama 3.1` · `Ollama` · `LoRA` · `ChromaDB` · `TrueNAS/ZFS` |
+| **[homelab](https://github.com/elijahbeese/homelab)** | Segmented home network and server infrastructure -- FortiGate firewall, VLAN-isolated zones, multiple rack servers, ZFS storage, and a dedicated GPU box for AI training | `FortiGate` · `TrueNAS/ZFS` · `VLAN` · `Ollama` · `Tailscale` |
+| **[sitrep](https://github.com/elijahbeese/sitrep)** | AI job intel platform -- 9-source parallel discovery, AI scoring, recruiter recon, outreach, gap & interview prep | `Python` · `Flask` · `OpenAI` · `Hunter.io` · `Railway` |
 | **[scambusters-agent](https://github.com/elijahbeese/scambusters-agent)** | Autonomous OSINT pipeline for crypto scam investigation + takedown drafting | `Python` · `GPT-4o` · `URLScan` · `WHOIS` · `Passive DNS` |
-| **[lab5-vuln-mgmt](https://github.com/elijahbeese/lab5-vuln-mgmt)** | Offline ACAS/Tenable.sc-style vulnerability management toolchain for RHEL 9. OpenSCAP → SQLite → NIST 800-53 mapping. **Stdlib Python only — no pip, no internet at runtime.** Custom XLSX parser, custom HTTP server, append-only triage audit log. | `Python stdlib` · `OpenSCAP` · `SQLite` · `NIST 800-53` · `RHEL 9` |
-| **[AAvsD-Sim](https://github.com/elijahbeese/AAvsD-Sim)** | RL network security simulation. **Q-Learning attacker vs Deep Q-Network defender** competing in real time across Linux network namespaces over a GRE-over-IPSec tunnel. Raw socket packet construction with `struct` — no scapy, no hping3. Built at TECO TOC. | `Python` · `numpy` · `nftables` · `GRE/IPSec` · `Q-Learning` · `DQN` |
+| **[lab5-vuln-mgmt](https://github.com/elijahbeese/lab5-vuln-mgmt)** | Offline ACAS/Tenable.sc-style vulnerability management toolchain for RHEL 9. OpenSCAP -> SQLite -> NIST 800-53 mapping. **Stdlib Python only -- no pip, no internet at runtime.** | `Python stdlib` · `OpenSCAP` · `SQLite` · `NIST 800-53` · `RHEL 9` |
+| **[AAvsD-Sim](https://github.com/elijahbeese/AAvsD-Sim)** | RL network security simulation. **Q-Learning attacker vs Deep Q-Network defender** competing in real time across Linux network namespaces over a GRE-over-IPSec tunnel. | `Python` · `numpy` · `nftables` · `GRE/IPSec` · `Q-Learning` · `DQN` |
 | **[dotfiles](https://github.com/elijahbeese/dotfiles)** | Personal dev environment configs. Because muscle memory beats mouse memory. | `shell` · `config` |
 
 ---
@@ -48,7 +49,8 @@ profile = {
 [![ISC2 CC](https://img.shields.io/badge/ISC2-Certified_in_Cybersecurity-006400?style=for-the-badge&logo=isc2&logoColor=white)](https://www.isc2.org/certifications/cc)
 [![AWS CCP](https://img.shields.io/badge/AWS-Cloud_Practitioner-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/certification/certified-cloud-practitioner/)
 [![Microsoft AZ-900](https://img.shields.io/badge/Microsoft-AZ--900-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/)
-[![Active Clearance](https://img.shields.io/badge/Clearance-Active-00FF41?style=for-the-badge&logo=shield&logoColor=black)](#)
+[![OSCP](https://img.shields.io/badge/OSCP-In_Progress-000000?style=for-the-badge&logo=offensive-security&logoColor=white)](#)
+[![Active Clearance](https://img.shields.io/badge/Clearance-Active_TS%2FSCI-00FF41?style=for-the-badge&logo=shield&logoColor=black)](#)
 
 ---
 
@@ -65,10 +67,11 @@ profile = {
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
 [![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
+[![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)](https://ollama.com)
+[![TrueNAS](https://img.shields.io/badge/TrueNAS-0095D5?style=for-the-badge&logo=truenas&logoColor=white)](https://truenas.com)
+[![Fortinet](https://img.shields.io/badge/FortiGate-EE3124?style=for-the-badge&logo=fortinet&logoColor=white)](https://fortinet.com)
 [![Splunk](https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white)](https://splunk.com)
 [![Wazuh](https://img.shields.io/badge/Wazuh-3578E5?style=for-the-badge&logo=wazuh&logoColor=white)](https://wazuh.com)
-[![Proxmox](https://img.shields.io/badge/Proxmox-E57000?style=for-the-badge&logo=proxmox&logoColor=white)](https://proxmox.com)
-[![OPNsense](https://img.shields.io/badge/OPNsense-D94F00?style=for-the-badge&logo=opnsense&logoColor=white)](https://opnsense.org)
 [![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com)
 [![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com)
 [![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)](https://kernel.org)
@@ -76,7 +79,6 @@ profile = {
 [![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)](https://wireshark.org)
 [![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
 [![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)
-[![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app)
 [![Tailscale](https://img.shields.io/badge/Tailscale-242424?style=for-the-badge&logo=tailscale&logoColor=white)](https://tailscale.com)
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com)
 
@@ -101,13 +103,13 @@ profile = {
 
 ```
 [##########] Blue Team Operations
+[######### ] AI x Security / LLM Infrastructure
 [######### ] Threat Detection & SIEM
-[######### ] Security Automation & AI
-[########  ] Incident Response
-[########  ] OSINT & Threat Intelligence
+[########  ] Security Automation
+[########  ] Network Segmentation & Defense
+[#######   ] OSINT & Threat Intelligence
 [#######   ] Vulnerability Management & Compliance
-[#######   ] Network Security
-[######    ] Critical Infrastructure / ICS
+[######    ] Incident Response
 [#####     ] Adversarial ML & RL Security
 ```
 
