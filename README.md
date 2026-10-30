@@ -16,7 +16,6 @@ profile = {
     },
     "focus":        ["Blue Team Ops", "AI x Security", "Homelab Infrastructure",
                      "Applied ML", "Network Defense"],
-    "clearance":    "Active TS/SCI",
     "status":       "Drilling. Building. Fine-tuning my own AI on hardware I set up myself.",
 }
 ```
